@@ -1,0 +1,61 @@
+Cheat sheet: https://education.github.com/git-cheat-sheet-education.pdf
+sudo apt-get install git
+
+sudo wget https://github.com/shiftkey/desktop/releases/download/release-3.1.1-linux1/GitHubDesktop-linux-3.1.1-linux1.deb
+sudo apt-get install gdebi-core 
+sudo gdebi GitHubDesktop-linux-3.1.1-linux1.deb
+
+to start cloning(AVLtmu or your repo):
+create PAT(classic)
+allow all privilidges
+clone!
+
+Check git branch:
+git branch
+
+Set origin:
+git remote add origin https://github.com/AVL-TMU/learn_git.git
+fatal: remote origin already exists.
+
+To create a branch and switch to it:
+git checkout -b branchname
+
+To add all files to be tracked:
+git add .
+
+To commit with a message:
+git commit -m "insert your message"
+
+To add a branch:
+git push origin branchname
+
+To switch to an exisiting branch:
+git checkout branchname
+
+To revert a branch:
+git revert branchname
+
+To stash changes: - keep the change for later, or temporarily hide them. 
+git stash
+
+To unstash:
+git stash pop -> the latest stash gets pushed. 
+git stash save
+
+To delete a branch:
+git push origin --delete branchname
+git branch -D localbranchname
+
+To get the latest changes:
+git pull origin branchname
+
+To find current remote URL:
+git config --get remote.origin.url
+
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Personal Access Code - Expiration June 30, 2023
+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
