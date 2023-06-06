@@ -68,8 +68,7 @@ states_act = out.quad_state';
 rotor_Params = out.quad_rotorParams';
 rotor_Forces = out.quad_rotorForces';
 
-TV_PosAtt_Animation(states_act,rotor_Params,rotor_Forces)
-
+%TV_PosAtt_Animation(states_act,rotor_Params,rotor_Forces)
 %drone_Animation(x_act,y_act,z_act,phi_act,the_act,psi_act);
 %% Thrust Vectoring Drone Animation
 %tv_Animation(out.quad_rotorParams);
