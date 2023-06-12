@@ -56,7 +56,6 @@ for i=1:m
       v0(4,i) = 0;
       v0(5,i) = 0;
       v0(6,i) = 0;
-
 end
 
 vopt_old = v0;
@@ -500,14 +499,12 @@ hold on
 plot(vHistory(2,:),'b')
 legend('Fyplant','Fympc')
 
-
 subplot(2,3,3)
 plot(F_M(3,:),'r')
 grid on
 hold on
 plot(vHistory(3,:),'b')
 legend('Fzplant','Fzmpc')
-
 
 subplot(2,3,4)
 plot(F_M(4,:),'r')
@@ -516,14 +513,12 @@ hold on
 plot(vHistory(4,:),'b')
 legend('Mphiplant','Mphimpc')
 
-
 subplot(2,3,5)
 plot(F_M(5,:),'r')
 grid on
 hold on
 plot(vHistory(5,:),'b')
 legend('Mthetaplant','Mthetampc')
-
 
 subplot(2,3,6)
 plot(F_M(6,:),'r')
@@ -549,14 +544,12 @@ grid on
 xlabel('time')
 title('Fy')
 
-
 subplot(3,2,3)
 hold on
 plot(tHistory,vHistory(3,:))
 grid on
 xlabel('time')
 title('Fz')
-
 
 subplot(3,2,4)
 hold on
@@ -565,14 +558,12 @@ grid on
 xlabel('time')
 title('Mphi')
 
-
 subplot(3,2,5)
 hold on
 plot(tHistory,vHistory(5,:))
 grid on
 xlabel('time')
 title('Mtheta')
-
 
 subplot(3,2,6)
 hold on
@@ -581,11 +572,8 @@ grid on
 xlabel('time')
 title('Mpsi')
 
-
-
 % % Plot the control variables.
 figure
-
 subplot(4,3,1)
 hold on
 plot(tHistory,uHistory(1,:))
@@ -1029,8 +1017,8 @@ FR = F_R(2,3);
 
 Omega = w(1)-w(2)+w(3)-w(4);
 
-MPhi = -MPhi;
-MThe = -MThe;
+% MPhi = -MPhi;
+% MThe = -MThe;
 
 dP = (1/Ixx)*((Iyy-Izz)*Q*R+MPhi-Ir*Q*Omega-Ar*P);
 dQ = (1/Iyy)*((Ixx-Izz)*P*R+MThe-Ir*P*Omega-Ar*Q);

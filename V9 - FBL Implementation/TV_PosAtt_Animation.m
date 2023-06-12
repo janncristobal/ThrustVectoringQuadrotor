@@ -54,9 +54,9 @@ zp = zeros(1,length(to));
  grid on;
  axis equal;
 
-  xlim([-4 4]); ylim([-4 4]); zlim([0 3.5]);
+%  xlim([-4 4]); ylim([-4 4]); zlim([0 3.5]);
 % xlim([-1 1]); ylim([-1 1]); zlim([-0.5 1]);
-%xlim([-2.5 2.5]); ylim([-2.5 2.5]); zlim([0 3.5]);
+xlim([-2.5 2.5]); ylim([-2.5 2.5]); zlim([0 3.5]);
  %title('(JITENDRA) Drone Animation')
  %title('Thrust Vectoring Quadrotor Animation')
  xlabel('X[m]');
