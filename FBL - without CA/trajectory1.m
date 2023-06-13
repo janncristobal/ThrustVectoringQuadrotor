@@ -25,12 +25,6 @@ zd = zeros(1,elements);
         ud(1,i) = 0;
         vd(1,i) = 0; 
         wd(1,i) = 0.2;
-
-        phid(1,i) = (pi/300)*cos(circRate*simTime(i));
-        pd(1,i) = -(pi/300)*sin(circRate*simTime(i));
-        % psid(1,i) = pi;
-        % rd(1,i) = 0;
-
         %disp('yes 0 - 10')
         % 10-20s
         elseif i <= (20/stepSize)+1 && i > (10/stepSize)+1
@@ -40,9 +34,6 @@ zd = zeros(1,elements);
         ud(1,i) = 0.2;
         vd(1,i) = 0; 
         wd(1,i) = 0;
-
-        phid(1,i) = -(pi/300)*cos(circRate*simTime(i)-10);
-        pd(1,i) = (pi/300)*sin(circRate*simTime(i)-10);
         %disp('yes 10 - 20')
         % 20-80ss
         elseif i <= (80/stepSize)+1 && i > (20/stepSize)+1
@@ -52,9 +43,6 @@ zd = zeros(1,elements);
         ud(1,i) = -circRate*circRadius*sin(circRate*(simTime(i)-20));
         vd(1,i) = circRate*circRadius*cos(circRate*(simTime(i)-20));
         wd(1,i) = 0;
-
-        phid(1,i) = (pi/300)*cos(circRate*simTime(i)-20);
-        pd(1,i) = -(pi/300)*sin(circRate*simTime(i)-20);
         %disp('yes 20 - 80')
         % 80-90s
         elseif i <= (90/stepSize)+1 && i>(80/stepSize)+1
@@ -64,9 +52,6 @@ zd = zeros(1,elements);
         ud(1,i) = 0 - 0.2;
         vd(1,i) = 0; 
         wd(1,i) = 0;
-
-        phid(1,i) = (pi/300)*cos(circRate*simTime(i)-80);
-        pd(1,i) = -(pi/300)*sin(circRate*simTime(i)-80);
         %disp('yes 80 - 90')
         % 90-100s
         elseif i<=(100/stepSize)+1 && i>(90/stepSize)+1
@@ -76,9 +61,6 @@ zd = zeros(1,elements);
         ud(1,i) = 0;
         vd(1,i) = 0; 
         wd(1,i) = 0-0.2;
-
-        phid(1,i) = (pi/300)*cos(circRate*simTime(i)-90);
-        pd(1,i) = -(pi/300)*sin(circRate*simTime(i)-90);
         %disp('yes 90 - 100')
         end
     end
