@@ -47,9 +47,9 @@ CA(1,1) = 1;CA(2,2) = 1;CA(3,3) = 1;
 %aControllability = rank(ctrb(ss(AA,BA,CA,DA)));
 
 QA = CA'*CA;
-QA(4,4) = 1;
-QA(5,5) = 1;
-QA(6,6) = 1;
+QA(3,3) = 100;
+QA(4,4) = 100;
+QA(3,3) = 100;
 %QA(4,4) = 10;QA(5,5) = 10;QA(6,6) = 10;
 RA = eye(3);
 
