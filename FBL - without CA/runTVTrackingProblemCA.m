@@ -35,7 +35,8 @@ clear;
 %     plot(t_sim(:),x_sim(:,i),'r.-')
 %     plot(t_sim(:),XD(:,i),'b')
 %     end
-
+% see if github dekstop can see this change
+% yes it does -> problems are kinda fixed
 
 %% Method 2
 t0 = 0;
