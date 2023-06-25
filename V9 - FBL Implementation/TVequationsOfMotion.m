@@ -102,6 +102,10 @@ dP = (1/Ixx)*((Iyy-Izz)*Q*R+MPhi-Ir*Q*Omega-Ar*P);
 dQ = (1/Iyy)*((Ixx-Izz)*P*R+MThe-Ir*P*Omega-Ar*Q);
 dR = (1/Izz)*((Iyy-Ixx)*Q*P+MPsi-Ar*R);
 
+% dP = (1/Ixx)*((Izz-Iyy)*Q*R+MPhi-Ir*Q*Omega-Ar*P);
+% dQ = (1/Iyy)*((Ixx-Izz)*P*R+MThe+Ir*P*Omega-Ar*Q);
+% dR = (1/Izz)*((Iyy-Ixx)*Q*P+MPsi-Ar*R);
+
 dPhi= P + sin(Phi)*tan(The)*Q + cos(Phi)*tan(The)*R;
 dThe= cos(Phi)*Q - sin(Phi)*R;
 dPsi= sin(Phi)/cos(The)*Q + cos(Phi)/cos(The)*R;

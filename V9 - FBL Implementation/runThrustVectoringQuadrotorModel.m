@@ -25,8 +25,8 @@ Ax = 0.3;Ay = 0.3;Az = 0.25; Ar = 0.2;
 %% Trajectory Planning 
 elements = 1001;
 simTime = linspace(0,100,elements);
-XD = trajectory1(simTime,elements);
-
+%XD = trajectory1(simTime,elements);
+XD = trajectory3(simTime,elements);
 pth.p_d = timeseries(XD(1,:),simTime);
 pth.q_d = timeseries(XD(2,:),simTime);
 pth.r_d = timeseries(XD(3,:),simTime);
@@ -43,13 +43,13 @@ pth.z_d = timeseries(XD(12,:),simTime);
 %% Run Simulink
 
     % intial condition
-    x0 = [0,0,0,0,0,0,0,0,0.2,0,0,0]'; 
+    x0 = [0,0,0,0.01,0,0,0,0,0.2,0,0,0]'; 
     % simulation time
     stime = 100;
     % Run quadsim.slx Simulink Model.
-    out = sim('simulinkThrustVectoringModel.slx',stime);
+    out = sim('simulinkTVModel.slx',stime);
 
-    %% Drone Position and Attitude Animation
+%% Drone Position and Attitude Animation
 p_act(1,:) = out.quad_state(:,1);
 q_act(1,:) = out.quad_state(:,2);
 r_act(1,:) = out.quad_state(:,3);
@@ -68,7 +68,7 @@ states_act = out.quad_state';
 rotor_Params = out.quad_rotorParams';
 rotor_Forces = out.quad_rotorForces';
 
-TV_PosAtt_Animation(states_act,rotor_Params,rotor_Forces)
+%TV_PosAtt_Animation(states_act,rotor_Params,rotor_Forces)
 
 %drone_Animation(x_act,y_act,z_act,phi_act,the_act,psi_act);
 %% Thrust Vectoring Drone Animation
