@@ -14,6 +14,11 @@ b2 = -asin((u_R(5))/(cos(e2)*sqrt(u_R(4)^2+u_R(5)^2+u_R(6)^2)));
 b3 = asin((u_R(8))/(cos(e3)*sqrt(u_R(7)^2+u_R(8)^2+u_R(9)^2)));
 b4 = asin((u_R(11))/(cos(e4)*sqrt(u_R(10)^2+u_R(11)^2+u_R(12)^2)));
 
+% w1 = (30/pi)*sqrt(sqrt(u_R(1)^2+u_R(2)^2+u_R(3)^2)/(kT));
+% w2 = (30/pi)*sqrt(sqrt(u_R(4)^2+u_R(5)^2+u_R(6)^2)/(kT));
+% w3 = (30/pi)*sqrt(sqrt(u_R(7)^2+u_R(8)^2+u_R(9)^2)/(kT));
+% w4 = (30/pi)*sqrt(sqrt(u_R(10)^2+u_R(11)^2+u_R(12)^2)/(kT));
+
 w1 = (30/pi)*sqrt(sqrt(u_R(1)^2+u_R(2)^2+u_R(3)^2)/(kT));
 w2 = (30/pi)*sqrt(sqrt(u_R(4)^2+u_R(5)^2+u_R(6)^2)/(kT));
 w3 = (30/pi)*sqrt(sqrt(u_R(7)^2+u_R(8)^2+u_R(9)^2)/(kT));

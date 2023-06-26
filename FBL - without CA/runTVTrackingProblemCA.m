@@ -40,7 +40,7 @@ clear;
 
 %% Method 2
 t0 = 0;
-tf = 2;
+tf = 0.055;
 %x0 = [0,0,0,0,0,0,0,0.1047,0.2,1,0,0]';
 x0 = [0,0,0,0,0,0,0,0,0,0,0,0]';
 [t,x] = ode45(@(t,x) clsys(t,x),[t0 tf],x0);
@@ -60,6 +60,7 @@ set(0, 'CurrentFigure', f1)
     hold on 
     plot(t(1:10:end),x(1:10:end,i),'r.-')
     plot(t(1:10:end),XD(1:10:end,i),'b')
+    grid on;
     end
 
 %% Functions
@@ -71,10 +72,11 @@ function x_dot = clsys(t,x)
 xd = trajectory(t,x);
 [K_pos1,~,K_att1,~] = controllerParams;
 [F,M] = fbl(x,xd,K_pos1,K_att1);
-%v = [F;M];
-u_R = controlAllocation(F,M);
-u = rotorParams(u_R);
-x_dot = plant2(x,u);
+vd = [F;M];
+%u_R = controlAllocation(F,M);
+%u = rotorParams(u_R);
+u = CAplusFM(vd); % Dr. Reza's Code
+x_dot = plant(x,u);
 
 end
 
@@ -97,21 +99,29 @@ phid = xd;
 thed = yd;
 psid = zd;
 
-% pd = phid-psid*sin(x(5));
-% qd = thed*cos(x(4))+psid*sin(x(4))*cos(x(5));
-% rd = -thed*sin(x(4))+psid*cos(x(4))*cos(x(5));
-
-% pd = phid-psid*sin(thed);
-% qd = thed*cos(phid)+psid*sin(phid)*cos(thed);
-% rd = -thed*sin(phid)+psid*cos(phid)*cos(thed);
-
-% pd = ud;
-% qd = vd;
-% rd = wd;
-
 pd = ud-wd*sin(thed);
 qd = vd*cos(phid)+wd*sin(phid)*cos(thed);
 rd = -vd*sin(phid)+wd*cos(phid)*cos(thed);
+
+% tiltRate = pi/300;
+% altRate = 0.2;
+% circRadius = 1;
+% circRate = pi/30;
+% 
+% xd = 0;
+% yd = 0;
+% zd = 2;
+% ud = 0;
+% vd = 0;
+% wd = 0;
+% 
+% phid = 0;
+% thed = deg2rad(8);
+% psid = 0;
+% 
+% pd = 0;
+% qd = 0;
+% rd = 0;
 
 XD = [pd;qd;rd;phid;thed;psid;ud;vd;wd;xd;yd;zd];
 end

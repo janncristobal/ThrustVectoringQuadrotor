@@ -26,7 +26,7 @@ Ax = 0.3;Ay = 0.3;Az = 0.25; Ar = 0.2;
 elements = 1001;
 simTime = linspace(0,100,elements);
 %XD = trajectory1(simTime,elements);
-XD = trajectory3(simTime,elements);
+XD = trajectory1(simTime,elements);
 pth.p_d = timeseries(XD(1,:),simTime);
 pth.q_d = timeseries(XD(2,:),simTime);
 pth.r_d = timeseries(XD(3,:),simTime);
