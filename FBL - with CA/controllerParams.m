@@ -1,14 +1,8 @@
 function [K_pos1,K_pos2,K_att1,K_att2] = controllerParams
 % Quadrotor Params
-%m=1.0230; %total mass of drone
 Ixx=9.5e-03;Iyy=9.5e-03;Izz=1.86e-02;
-%I = [Ixx 0 0;0 Iyy 0;0 0 Izz]; % Inertia Tensor
 
-%find k,d,l
-%k=2.98e-06; kQ = 1.14e-7;%kQ=.0382; 
-%find m,Ixx,Iyy,Izz,Ir
 m=0.468; 
-%m = 0.68;
 g = 9.81;
 
 Ir=3.357e-05;

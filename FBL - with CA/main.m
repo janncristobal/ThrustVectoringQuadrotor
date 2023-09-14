@@ -1,13 +1,16 @@
 % Thrust Vectoring Quadrotor with Control Allocation
 clc;
 clear;
-global v_des v_act
+addpath("qcat\");
+global v_des v_act rotor_Params rotor_Forces
 v_des = zeros(6,1);
 v_act = zeros(6,1);
+rotor_Forces = zeros(12,1);
+rotor_Params = zeros(12,1);
 
 t0 = 0;
 %tf = 0.055;
-tf = 30;
+tf = 100;
 x0 = [0,0.2249,0.0199,1.0000,0,0,0,0.1047,0.2,1,0,0]';
 %x0 = [0,0,0,0,0,0,0,0,0,0,0,0]';
 [t,x] = ode45(@(t,x) clsys(t,x),[t0 tf],x0);
