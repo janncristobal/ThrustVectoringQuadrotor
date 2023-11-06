@@ -31,34 +31,24 @@ set(0, 'CurrentFigure', f1)
     plot(t(1:10:end),x(1:10:end,i),'r.-')
     plot(t(1:10:end),XD(1:10:end,i),'b')
     grid on;
-    xlabel('time [s]')
-        if i < 4
-            ylabel('body rates [rad/s]');
-        elseif i<7 && i>3
-            ylabel('euler angles [rad]');
-        elseif i < 10 && i> 6
-            ylabel('velocity [m/s]');
-        else
-            ylabel('position [m]');
-        end
+    if i 
     end
     subplot(4,3,1)
-    legend('actual','desired','Location','northwest')
+    legend('desired','actual','Location','northwest')
 
 f2 = figure('Renderer', 'painters', 'Position', [10 10 1600 1000]);
 hold on
 title('Virtual Control')
 set(0, 'CurrentFigure', f2)
-    for i = 1:6 
-        subplot(2,3,i)
-        title(i)
-        hold on 
-        plot(v_des(i,100:10:end),'r--')
-        plot(v_act(i,100:10:end),'b-.')
-        grid on;
-    end
-    subplot(2,3,1)
+for i = 1:6 
+    subplot(2,3,i)
+    title(i)
+    hold on 
+    plot(v_des(i,100:10:end),'r--')
+    plot(v_act(i,100:10:end),'b-.')
+    grid on;
     legend('desired','actual','Location','northwest')
+end
 
 function plotTitle = titlePlot(i)
     switch i

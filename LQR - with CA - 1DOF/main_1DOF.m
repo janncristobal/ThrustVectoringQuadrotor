@@ -1,16 +1,12 @@
-% Thrust Vectoring Quadrotor with Control Allocation
+%main1DOF TV Drone 
+
 clc;
 clear;
-addpath("qcat\");
-global v_des v_act rotor_Params rotor_Forces
-v_des = zeros(6,1);
-v_act = zeros(6,1);
-rotor_Forces = zeros(12,1);
-rotor_Params = zeros(12,1);
+close all;
 
 t0 = 0;
 %tf = 0.055;
-tf = 100;
+tf = 14;
 x0 = [0,0.2249,0.0199,1.0000,0,0,0,0.1047,0.2,1,0,0]';
 %x0 = [0,0,0,0,0,0,0,0,0,0,0,0]';
 [t,x] = ode45(@(t,x) clsys(t,x),[t0 tf],x0);
@@ -45,20 +41,20 @@ set(0, 'CurrentFigure', f1)
     subplot(4,3,1)
     legend('actual','desired','Location','northwest')
 
-f2 = figure('Renderer', 'painters', 'Position', [10 10 1600 1000]);
-hold on
-title('Virtual Control')
-set(0, 'CurrentFigure', f2)
-    for i = 1:6 
-        subplot(2,3,i)
-        title(i)
-        hold on 
-        plot(v_des(i,100:10:end),'r--')
-        plot(v_act(i,100:10:end),'b-.')
-        grid on;
-    end
-    subplot(2,3,1)
-    legend('desired','actual','Location','northwest')
+% f2 = figure('Renderer', 'painters', 'Position', [10 10 1600 1000]);
+% hold on
+% title('Virtual Control')
+% set(0, 'CurrentFigure', f2)
+%     for i = 1:6 
+%         subplot(2,3,i)
+%         title(i)
+%         hold on 
+%         plot(v_des(i,100:10:end),'r--')
+%         plot(v_act(i,100:10:end),'b-.')
+%         grid on;
+%     end
+%     subplot(2,3,1)
+%     legend('desired','actual','Location','northwest')
 
 function plotTitle = titlePlot(i)
     switch i
