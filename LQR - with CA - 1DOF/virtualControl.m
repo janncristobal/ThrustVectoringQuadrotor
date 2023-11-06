@@ -9,9 +9,9 @@ w = [u(1),u(2),u(3),u(4)];
 % eta = [-u(9),-u(10),u(11),u(12)];
 
 %Rotor Roll 
-beta = [u(5),u(6),u(7),u(8)];
+beta = [0,0,u(7),u(8)];
 %Rotor Pitch 
-eta = [u(9),u(10),u(11),u(12)];
+eta = [u(5),u(6),0,0];
 
 % Quad Dimensions
 lx = 0.225;

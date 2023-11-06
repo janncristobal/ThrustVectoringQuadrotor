@@ -19,4 +19,4 @@ w4 = (30/pi)*sqrt(sqrt(u_R(7)^2+u_R(8)^2)/(kT));
 % rotorRoll = [b1,b2,b3,b4];
 % rotorPitch = [e1,e2,e3,e4];
 
-control_inputs = [w1,w2,w3,w4,e1,e2,b3,b4]';
+control_inputs = [w1,w2,w3,w4,e1,2,b3,b4,e1,e2,e3,e4]';
