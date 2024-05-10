@@ -1,12 +1,11 @@
-%main1DOF TV Drone 
-
+%main 1DOF TV Drone 
 clc;
 clear;
 close all;
 
 t0 = 0;
 %tf = 0.055;
-tf = 1;
+tf = 10;
 x0 = [0,0.2249,0.0199,1.0000,0,0,0,0.1047,0.2,1,0,0]';
 %x0 = [0,0,0,0,0,0,0,0,0,0,0,0]';
 [t,x] = ode45(@(t,x) clsys(t,x),[t0 tf],x0);
