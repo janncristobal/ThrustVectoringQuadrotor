@@ -1,0 +1,19 @@
+main script 
+
+list of functions 
+1) clsys -  
+2) trajectory - where we want the drone to go 
+3) controllerParams - position and attitude controller gains
+4) fbl - feedback linearization controller 
+5) controlAllocation - 
+    - take in the virtual control; v = [Fx;Fy;Fz;Mx;My;Mz];
+    - outputs the desired force of each rotor in x,y,z in the local 
+    rotor reference.
+        - u_R = [u(1);u(2);u(3);-u(4);-u(5);u(6);u(7);-u(8);-u(9);-u(10);u(11);-u(12)];
+6) rotorParams
+    - takes in the u_R 
+    - outputs the rotorSpeed, rollAngle, and pitchAngle 
+7) virtualControl
+8) plant
+
+
