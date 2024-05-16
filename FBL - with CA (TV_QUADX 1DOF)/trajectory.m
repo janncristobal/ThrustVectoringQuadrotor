@@ -13,13 +13,21 @@ ud = -circRadius*circRate*sin(circRate*t);
 vd = circRadius*circRate*cos(circRate*t);
 wd = altRate;
 
-phid = xd;
-thed = yd;
-psid = zd;
+phid = 0;
+thed = 0;
+psid = 0;
 
-pd = ud-wd*sin(thed);
-qd = vd*cos(phid)+wd*sin(phid)*cos(thed);
-rd = -vd*sin(phid)+wd*cos(phid)*cos(thed);
+pd = 0;
+qd = 0;
+rd = 0;
+
+% phid = xd;
+% thed = yd;
+% psid = zd;
+% 
+% pd = ud-wd*sin(thed);
+% qd = vd*cos(phid)+wd*sin(phid)*cos(thed);
+% rd = -vd*sin(phid)+wd*cos(phid)*cos(thed);
 
 % tiltRate = pi/300;
 % altRate = 0.2;
