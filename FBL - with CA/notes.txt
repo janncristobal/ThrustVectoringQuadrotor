@@ -1,0 +1,13 @@
+main script 
+
+list of functions 
+1) clsys 
+2) trajectory 
+3) controllerParams
+4) fbl 
+5) controlAllocation 
+6) rotorParams
+7) virtualControl
+8) plant
+
+
