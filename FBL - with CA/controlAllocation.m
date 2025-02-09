@@ -13,7 +13,7 @@ v_ca = [F;M]; %virtual work
 [B_ca,umin_ca,umax_ca] = controlAllocParams;
 
 %solve for u using pseudo inverse
-%u = pinv(B_ca)*v_ca;
+u = pinv(B_ca)*v_ca;
 % Sequential Least Square 
 %u = sls_alloc(B_ca,v_ca,umin_ca,umax_ca); %-> not working 
 % Minimal Least Square
@@ -25,7 +25,7 @@ Wu = eye(12);
 %Wu(4,4) = 4;Wu(5,5) = 5;Wu(6,6) = 6;
 %Wu(7,7) = 7;Wu(8,8) = 8;Wu(9,9) = 9;
 %Wu(10,10) = 0.1;Wu(11,11) = 0.1;Wu(12,12) = 0.1;
-u = wls_alloc(B_ca,v_ca,umin_ca,umax_ca,Wv,Wu); %-> works really well
+% u = wls_alloc(B_ca,v_ca,umin_ca,umax_ca,Wv,Wu); %-> works really well
 
 
 % Interior Point Method

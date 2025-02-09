@@ -1,7 +1,7 @@
 % Thrust Vectoring Quadrotor with Control Allocation
 clc;
 clear;
-addpath("qcat\");
+addpath("qcat/");
 global v_des v_act rotor_Params rotor_Forces
 v_des = zeros(6,1);
 v_act = zeros(6,1);
