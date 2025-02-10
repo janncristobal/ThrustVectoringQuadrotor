@@ -30,4 +30,5 @@ v_act = [v_act,v_actual]; % Force and Moment calculated based on the actuator in
 % rotor_Forces = [rotor_Forces,u_R];
 
 x_dot = plant(x,v_actual);
+% Feb 10
 end

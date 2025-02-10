@@ -256,6 +256,7 @@ alpha(rotor4(2),0.3);
      drawnow
     pause(0.01);
  end
+ % Feb 10
  %exportgraphics(fig1,'config1sim.pdf')
 
  

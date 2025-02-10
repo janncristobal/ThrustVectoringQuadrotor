@@ -69,5 +69,5 @@ K_att2 = inv(BA'*BA) * BA' * AA;  % Feedforward
 % disp(K_att1);
 % disp('Integral Attitude Gain:');
 % disp(Ki_att);
-
+% Feb 10
 end

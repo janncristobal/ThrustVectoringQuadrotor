@@ -23,4 +23,5 @@ qd = 0;
 rd = 0;
 
 XD = [pd;qd;rd;phid;thed;psid;ud;vd;wd;xd;yd;zd];
+% Feb 10
 end

@@ -39,4 +39,5 @@ for i = 1:4
 end
 
 control_inputs = [w;b;e];
+% Feb 10
 end

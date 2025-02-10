@@ -87,5 +87,5 @@ v_actual = [FBx;FBy;FBz;MPhi;MThe;MPsi];
 % v_actual1 = [sign(u_FM(1))*abs(FBx);sign(u_FM(2))*abs(FBy);...
 %     sign(u_FM(3))*abs(FBz);sign(u_FM(4))*abs(MPhi);...
 %     sign(u_FM(5))*abs(MThe);sign(u_FM(6))*abs(MPsi)]
-
+% Feb 10
 end

@@ -37,5 +37,5 @@ att_err = att_d - att;
 % Compute Moment
 % M = 10 * (K_att1 * att_err + Ki_att * e_att) + K_att2 * att_d;
 M = 10 * (K_att1 * att_err + Ki_att * att_err(1:3,1)) + K_att2 * att_d;
-
+% Feb 10
 end

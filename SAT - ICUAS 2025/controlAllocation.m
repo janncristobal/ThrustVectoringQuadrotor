@@ -24,4 +24,5 @@ u = pinv(B_ca)*v_ca;
 % u = wls_alloc(B_ca,v_ca,umin_ca,umax_ca,Wv,Wu); %-> works really well
 
 %u_R = [u(1);u(2);u(3);-u(4);-u(5);u(6);u(7);-u(8);-u(9);-u(10);u(11);-u(12)];
+% Feb 10
 end

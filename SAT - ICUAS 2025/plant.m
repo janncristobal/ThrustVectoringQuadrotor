@@ -56,4 +56,5 @@ dX = U;
 dY = V;
 dZ = W;
 x_dot = [dP; dQ; dR; dPhi; dThe; dPsi; dU; dV; dW; dX; dY; dZ];
+% Feb 10
 end
