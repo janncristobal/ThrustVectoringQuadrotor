@@ -9,10 +9,10 @@ rotor_Forces = zeros(12,1);
 rotor_Params = zeros(12,1);
 
 t0 = 0;
-tf = 60;
+tf = 10;
 x0 = [0,0,0,0,0,0,0,0,0,0,0,0]';
 
-[t1,x1] = ode45(@(t1,x1) clsys(t1,x1,2,t1(end)),[t0 tf],x0);
+[t1,x1] = ode45(@(t1,x1) clsys(t1,x1,1,t1(end)),[t0 tf],x0);
 
 for ii = 1:length(t1)
 XD(ii,:) = trajectory1(t1(ii)).';

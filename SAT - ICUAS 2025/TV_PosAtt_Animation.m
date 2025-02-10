@@ -254,7 +254,7 @@ alpha(rotor4(2),0.3);
       %movieVector(i) =  getframe(fig1);
         %delete(b);
      drawnow
-    pause(0.01);
+    pause(0.1);
  end
  % Feb 10
  %exportgraphics(fig1,'config1sim.pdf')

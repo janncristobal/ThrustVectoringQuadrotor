@@ -2,7 +2,7 @@
 function x_dot = clsys(t,x,controller,t_last)
 global v_des v_act rotor_Params rotor_Forces
 xd = trajectory1(t);
-[K_pos1,K_pos2,K_att1,K_att2] = controllerParams;
+[K_pos1,K_pos2,K_att1,K_att2] = controllerParamsAug;
 [K_pos1aug,K_pos2aug,K_att1aug,K_att2aug, Ki_pos, Ki_att] = controllerParamsAug;
 if controller == 1
     [F,M] = fbl(x,xd,K_pos1,K_att1);
